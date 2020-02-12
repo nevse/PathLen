@@ -30,7 +30,7 @@ namespace PathLen {
             foreach (var file in files) {
                 totalCount++;
                 int len = file.FullName.Length - pathLength + rootPathLength;
-                if (len < maxPathLen)
+                if (len <= maxPathLen)
                     continue;
                 errorCount++;
                 Console.WriteLine($"{len} : {file.FullName}");
